@@ -1,0 +1,32 @@
+{
+   "background": {
+      "page": "html/background.html"
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "js": [ "scripts/content.js" ],
+      "matches": [ "*://*.bing.com/*", "*://bing-rewards-bot-clone-sc.appspot.com/*" ],
+      "run_at": "document_start"
+   }, {
+      "js": [ "scripts/installed.js" ],
+      "matches": [ "*://bing-rewards-bot-clone-sc.appspot.com/*" ],
+      "run_at": "document_start"
+   } ],
+   "description": "Extends the abilities of the PogoCheats Bot",
+   "externally_connectable": {
+      "matches": [ "*://*.pogocheats.net/bing-rewards-bot/*" ]
+   },
+   "homepage_url": "http://bing-rewards-bot-clone-sc.appspot.com",
+   "icons": {
+      "128": "images/bsb128.png",
+      "16": "images/bsb16.png",
+      "48": "images/bsb48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAj+hqvP34vb40SZrY6sN6M6oVhTo2qcaU9vh2Bl98OGuWQ2OAkXborRI2dQ7yMm34Oy6Q03ma5E24JpejwjrztPuPCoXSxSc8kwwR1IBGdS84dxITrvhjaftPqNfgSQxVtHdlFevR3RQLIdpYByc56Dylu4fHDvx44jRHgQeLkcxxhOmMm6eOz4hbm8e6YcoMVtzU1wXdrNmY3moeYHWNSGPmPjsdU4XAkGa6YBvVo+4AyuO3rtjVDSD9PvPk2nyhN1T830iHk1D1dqEkktRCzdpRXBRYsltPfZom7uy/rEoHxynW38wOUwhTPVw+J7cRi9KsURWX2CMbiWYXBzjQEwIDAQAB",
+   "manifest_version": 2,
+   "name": "PogoCheats Bot Helper",
+   "permissions": [ "*://*.bing.com/*", "*://bing-rewards-bot-clone-sc.appspot.com/*", "webRequest", "webRequestBlocking", "tabs" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0.0.8",
+   "web_accessible_resources": [ "scripts/block-alerts.js" ]
+}
